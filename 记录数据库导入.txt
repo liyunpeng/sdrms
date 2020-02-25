@@ -1,0 +1,11 @@
+mysql> source D:\goworkspace\sdrms\sdrms.sql;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that
+corresponds to your MySQL server version for the right syntax to use near 'sourc
+e D:' at line 1
+
+原因：
+路径格式错误， 反斜线要替换成正斜线
+
+解决：
+source D:/goworkspace/sdrms/sdrms.sql
+

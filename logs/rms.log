@@ -1,2 +1,4 @@
-2020/02/24 16:47:08.860 [E]  Connect to the redis host 127.0.0.1:6379 failed
-2020/02/24 16:47:08.863 [E]  dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2020/02/25 10:34:17.463 [D]  /static/upload/1.jpg
+2020/02/25 10:34:22.829 [D]  /static/upload/1.jpg
+2020/02/25 14:14:25.767 [D]  /static/upload/1.jpg
+2020/02/25 14:44:47.522 [D]  author control: path=CourseController.Index userid=1  无权访问

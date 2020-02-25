@@ -46,7 +46,7 @@ func (c *HomeController) DoLogin() {
 		//保存用户信息到session
 		c.setBackendUser2Session(user.Id)
 		//获取用户信息
-		c.jsonResult(enums.JRCodeSucc, "登录成功", "")
+
 	} else {
 		c.jsonResult(enums.JRCodeFailed, "用户名或者密码错误", "")
 	}

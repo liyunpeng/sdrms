@@ -37,7 +37,7 @@ CREATE TABLE `rms_backend_user`  (
 -- ----------------------------
 -- Records of rms_backend_user
 -- ----------------------------
-INSERT INTO `rms_backend_user` VALUES (1, 'lihaitao', 'admin', 'e10adc3949ba59abbe56e057f20f883e', 0, 1, '18612348765', 'lhtzbj18@126.com', '/static/upload/1.jpg');
+INSERT INTO `rms_backend_user` VALUES (1, 'lihaitao', 'admin', 'e10adc3949ba59abbe56e057f20f883e', 1, 1, '18612348765', 'lhtzbj18@126.com', '/static/upload/1.jpg');
 INSERT INTO `rms_backend_user` VALUES (3, '张三', 'zhangsan', 'e10adc3949ba59abbe56e057f20f883e', 0, 1, '', '', '');
 INSERT INTO `rms_backend_user` VALUES (5, '李四', 'lisi', 'e10adc3949ba59abbe56e057f20f883e', 0, 0, '', '', '');
 
