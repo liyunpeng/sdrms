@@ -20,6 +20,7 @@ func InitLogs() {
 	consoleLogs = logs.NewLogger(1)
 	consoleLogs.SetLogger(logs.AdapterConsole)
 	consoleLogs.Async() //异步
+
 	fileLogs = logs.NewLogger(10000)
 	level := beego.AppConfig.String("logs::level")
 	fileLogs.SetLogger(logs.AdapterMultiFile, `{"filename":"logs/rms.log",
@@ -28,6 +29,7 @@ func InitLogs() {
 		"daily":true,
 		"maxdays":10}`)
 	fileLogs.Async() //异步
+
 	runmode = strings.TrimSpace(strings.ToLower(beego.AppConfig.String("runmode")))
 	if runmode == "" {
 		runmode = "dev"
