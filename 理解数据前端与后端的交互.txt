@@ -1,3 +1,4 @@
+以左侧菜单讲解：
 后端路由：
 beego.Router("/resource/usermenutree", &controllers.ResourceController{}, "POST:UserMenuTree")
 后端处理：

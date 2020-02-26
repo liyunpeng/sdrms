@@ -1,4 +1,17 @@
-以示例说明：
+权限管理的数据库表：
+mysql> show tables;
++----------------------------+
+| Tables_in_sdrms            |
++----------------------------+
+| rms_backend_user           |
+| rms_backend_user_rms_roles |
+| rms_course                 |
+| rms_resource               |
+| rms_role                   |
+| rms_role_backenduser_rel   |
+| rms_role_resource_rel      |
++----------------------------+
+根据角色来显示资源， 以示例说明：
 用户和角色的对应表，一个用户绑定一个角色， 一对一关系
 mysql> select * from rms_role_backenduser_rel;
 +----+---------+-----------------+---------------------+
