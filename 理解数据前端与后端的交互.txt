@@ -29,6 +29,7 @@ func (c *ResourceController) UserMenuTree() {
 </script>
 
 收到后端数据，re为response缩写，即后端返回的响应数据，  前端动态添加菜单
+response的数据会被解析出来，用解析出来的数据展开成左侧菜单
  function pageSidebarInit(options) {
         var url = options.url;
         $.sdpost(url, {}, function (re) {
@@ -50,9 +51,9 @@ func (c *ResourceController) UserMenuTree() {
                         //递归加载子节点
                         html.push(showSiderBarSon(e, data));
                     } else if (e.Rtype === 0) {
-                        //如果是区域，先添加header
+                        //如果是区域菜单，先添加header
                         html.push('<li class="header" > ' + e.Name + ' </li>');
-                        //添加区域的子节点
+                        //添加区域的子节点菜单
                         $(data).filter(function (i1, e1) {
                             return e1.Parent.Id === e.Id;
                         }).each(function (i2, e2) {
@@ -78,3 +79,32 @@ func (c *ResourceController) UserMenuTree() {
             }
         });
     }
+
+根据一菜单数据生成一个html菜单标签：
+function showSiderBarSon(cur, data) {
+    var html = [];
+    //有子菜单
+    if (cur.SonNum > 0) {
+        html.push('<li class="treeview">');
+        html.push('  <a href="javascript:;">');
+        html.push('    <i class="' + getIcon(cur.Icon) + '"></i>');
+        html.push('    <span>' + cur.Name + '</span>');
+        html.push('    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>');
+        html.push('  </a>');
+        html.push('  <ul class="treeview-menu">');
+        $(data).filter(function (i, e) {
+            return e.Parent.Id === cur.Id;
+        }).each(function (i, e) {
+            //递归调用，显示子节点
+            html.push(showSiderBarSon(e, data));
+        });
+        html.push('  </ul>')
+        html.push('</li>')
+   } else {
+         if (!cur.LinkUrl || cur.LinkUrl.length === 0) {
+             cur.LinkUrl = "javascript:;"
+         }
+         //无子菜单, 那么点击这个菜单，右侧内容面板就会显示为本菜但的a标签的href指定的url对应的页面
+         html.push('<li><a href="' + cur.LinkUrl + '"><i class="' + getIcon(cur.Icon) + '"></i><span>' + cur.Name + '</span></a></li>');
+     }
+     return html.join('');

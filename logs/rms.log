@@ -2,3 +2,7 @@
 2020/02/25 10:34:22.829 [D]  /static/upload/1.jpg
 2020/02/25 14:14:25.767 [D]  /static/upload/1.jpg
 2020/02/25 14:44:47.522 [D]  author control: path=CourseController.Index userid=1  无权访问
+2020/02/28 22:34:57.434 [E]  Connect to the redis host 127.0.0.1:6379 failed
+2020/02/28 22:34:57.434 [E]  dial tcp 127.0.0.1:6379: connect: connection refused
+2020/02/29 09:09:20.521 [E]  Connect to the redis host 127.0.0.1:6379 failed
+2020/02/29 09:09:20.521 [E]  dial tcp 127.0.0.1:6379: connect: connection refused

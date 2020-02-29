@@ -1,0 +1,4 @@
+2020/02/28 22:34:57.434 [E]  Connect to the redis host 127.0.0.1:6379 failed
+2020/02/28 22:34:57.434 [E]  dial tcp 127.0.0.1:6379: connect: connection refused
+2020/02/29 09:09:20.521 [E]  Connect to the redis host 127.0.0.1:6379 failed
+2020/02/29 09:09:20.521 [E]  dial tcp 127.0.0.1:6379: connect: connection refused
